@@ -135,7 +135,6 @@ namespace DDBot2
                     //iterate through results
                 {
                     conn = "";
-                    //server=xenophobiaxrt.com;user=ofpstestdb;database=ofpstestdb;port=3306;password=fX9K!YfZzUXc;SslMode=None
                     conn +=
                         "server=" + Regex.Replace(result.Groups[2].ToString(), "\r", "") + ";" +
                         "user=" + Regex.Replace(result.Groups[3].ToString(), "\r", "") + ";" +

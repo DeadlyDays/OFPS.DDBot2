@@ -197,8 +197,40 @@ namespace DDBot2
             }
             await ctx.RespondAsync($"Thread Handles (" + esc + ")!");
         }
-        
-        
+        [Command("joinedGame"), Description("Ex '.joinedGame 5' returns the number of players that joined game 5")]
+        public async Task JoinedGame(CommandContext ctx)
+        {
+            int ans = 0;
+
+            //Find all the players that have joined
+
+            await ctx.RespondAsync($"Total Players that have Joined Game " + ctx + " is " + ans);
+        }
+        [Command("listPlayers"), Description("Ex '.listPlayers 5' returns a list of player names that are in game 5")]
+        public async Task ListPlayers(CommandContext ctx)
+        {
+            String ans = "";
+
+            //Find all the players that currently ingame
+
+            await ctx.RespondAsync($"Player in Game " + ctx + " are " + ans);
+        }
+        [Command("kickPlayer"), Description("Ex '.kickPlayer Jed 5' kicks a player named Jed from game 5")]
+        public async Task ListPlayers(CommandContext ctx, CommandContext ctx2)
+        {
+
+            //Find all the players that currently ingame
+
+            await ctx.RespondAsync($"Player " + ctx + " kicked from game " + ctx2);
+        }
+        [Command("message"), Description("Ex '.message \"Jed is a fag\" 5' messages game 5")]
+        public async Task Message(CommandContext ctx, CommandContext ctx2)
+        {
+
+            //Find all the players that currently ingame
+
+            await ctx.RespondAsync($"Message Sent");
+        }
         
 
     }
